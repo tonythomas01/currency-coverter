@@ -96,22 +96,4 @@ final class CurrencyConversionTest extends TestCase
         // 1 JPY = 1.01 USD config
         $this->assertEquals("array( 'USD 5065.625', 'USD 3.24375' )", $output);
     }
-
-    //	public function testConversionStepsOnNormalInputs() {
-//		global $sample_xml_data_original, $sample_xml_data_modified;
-//		// Make sure we populate our db with a custom input
-//		$conversionData = simplexml_load_string($sample_xml_data_original);
-//		fetchAndUpdateConversionData($conversionData);
-//		$inputString = "'JPY 5000'";
-//		$output = processInputLineAndPrintResults($inputString);
-//		$this->assertEquals("'USD 65.625'", $output );
-//
-//		// Now try some modifications on the XML
-//		$conversionData = simplexml_load_string($sample_xml_data_modified);
-//		fetchAndUpdateConversionData($conversionData);
-//		$inputString = "'JPY 5000'";
-//		$output = processInputLineAndPrintResults($inputString);
-//		// 1 JPY = 1.01 USD config
-//		$this->assertEquals("'USD 5065.625'", $output );
-//	}
 }

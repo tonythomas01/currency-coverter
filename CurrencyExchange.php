@@ -1,6 +1,9 @@
 <?php
-include 'settings/database.php';
+include_once 'settings/database.php';
 
+/**
+ * Class CurrencyExchange
+ */
 class CurrencyExchange
 {
     private $currency;

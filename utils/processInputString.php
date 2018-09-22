@@ -17,6 +17,13 @@ function doCalculateExchangeForInput($inputString)
     return $currency->calculateEquivalentInUSD((float)$amount);
 }
 
+/**
+ * Accept a string of type array( 'JPY 5000', 'CZK 62.5' ) and call utility function to generate
+ * expected output
+ *
+ * @param $line
+ * @return null|string
+ */
 function extractExchangeFromArray($line)
 {
     if (preg_match("/array\((.*?)\)/", $line, $match) == 1) {
@@ -37,12 +44,25 @@ function extractExchangeFromArray($line)
     return $outputString;
 }
 
+/**
+ * Accept a string of type 'JPY 5000' and call utility function to generate
+ * expected output
+ *
+ * @param $line
+ * @return null|string
+ */
 function extractExchangeFromLine($line)
 {
     $amountInUSD = doCalculateExchangeForInput($line);
     return "'USD " . $amountInUSD  ."'";
 }
 
+/**
+ * Process raw line entry from user
+ *
+ * @param $line
+ * @return null|string
+ */
 function processInputLineAndPrintResults($line)
 {
     switch ($line) {

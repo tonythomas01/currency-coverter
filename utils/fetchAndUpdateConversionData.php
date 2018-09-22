@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * Process a parsed XML tree (child elements only) and update our database with the same in a
+ * single go
+ *
+ * @param $conversionData
+ * @return bool|mysqli_result
+ */
 function fetchAndUpdateConversionData($conversionData)
 {
     global $dbConnection;
