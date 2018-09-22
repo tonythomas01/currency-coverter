@@ -1,0 +1,1 @@
+CREATE TABLE IF NOT EXISTS `currency_exchange` ( `currency` VARCHAR(5) NOT NULL , `exchange_value` DECIMAL (10,8) NOT NULL , PRIMARY KEY (`currency`));
