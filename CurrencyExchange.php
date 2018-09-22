@@ -1,4 +1,5 @@
 <?php
+include 'settings/database.php';
 
 class CurrencyExchange
 {
@@ -21,8 +22,9 @@ class CurrencyExchange
         return $this->exchangeRate * $amount;
     }
 
-    public static function newFromName(mysqli $dbConnection, $currencyName)
+    public static function newFromName($currencyName)
     {
+        global $dbConnection;
         $statement = "SELECT currency, exchange_value FROM currency_exchange WHERE currency = ?";
         $query = $dbConnection->prepare($statement);
         $query->bind_param("s", $currencyName);

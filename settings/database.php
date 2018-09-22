@@ -1,9 +1,9 @@
 <?php
 
 $mysqlHostname = "localhost";
-$mysqlUserName = "your_settings";
-$mysqlPassword = "your_settings";
-$mysqlDatabase = "your_settings";
+$mysqlUserName = "root";
+$mysqlPassword = "toor";
+$mysqlDatabase = "test";
 
 $dbConnection = mysqli_connect($mysqlHostname, $mysqlUserName, $mysqlPassword, $mysqlDatabase);
 
